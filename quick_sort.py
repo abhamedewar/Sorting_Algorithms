@@ -3,9 +3,12 @@ def partition(arr, low, high):
 
     i = low
     j = high
+
     while i < j:
+        #find first element greater than pivot
         while arr[i] <= arr[pivot] and i < high:
             i += 1
+        #find first element smaller than pivot
         while arr[j] > arr[pivot] and j > low:
             j -= 1
         if i < j:
